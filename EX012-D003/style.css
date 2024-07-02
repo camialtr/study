@@ -1,0 +1,88 @@
+@import url('https://fonts.googleapis.com/css2?family=Bona+Nova+SC:ital,wght@0,400;0,700;1,400&display=swap');
+
+* {
+    margin: 0px;
+    padding: 0px;
+    font-family: 'Bona Nova SC', Verdana, Geneva, Tahoma, sans-serif;
+}
+
+html, body {
+    min-height: 100vh;
+    background-color: rgb(68, 68, 68);
+}
+
+header {
+    background-color: black;
+    color: white;
+    text-align: center;
+}
+
+header > h1 {
+    padding-top: 50px;
+    font-variant: small-caps;
+}
+
+header > p {
+    padding-bottom: 50px;
+}
+
+a {
+    color: white;
+    text-decoration: none;
+    font-weight: bolder;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+main {
+    max-width: 900px;
+    margin: auto;
+}
+
+section {
+    padding-top: 10vh;
+    padding-bottom: 10vh;
+    line-height: 2em;
+    padding-left: 20px;
+}
+
+section > p {
+    padding: 10px;
+}
+
+section#img01 {
+    background-image: url("images/background001.jpg");
+    background-position: center center;
+}
+
+section#img02 {
+    background-image: url("images/background002.jpg");
+    background-position: center center;
+}
+
+section.normal {
+    background-color: white;
+    color: black;
+}
+
+section.image {
+    background-color: rgb(167, 154, 154);
+    color: white;
+    box-shadow: inset 6px 6px 13px 0px hsla(0, 0%, 0%, 0.400);
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+section.image > p {
+    background-color: black;
+    display: inline-block;    
+}
+
+footer {
+    background-color: black;
+    text-align: center;
+    color: white;
+    padding: 10px;
+}
