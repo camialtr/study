@@ -1,0 +1,362 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Segunda tabela</title>
+    <style>
+        table {
+            width: 500px;
+            border-collapse: separate;
+            border-spacing: 0;
+        }
+
+        caption {
+            padding: 10px;
+            background-color: lavender;
+            border-radius: 10px 10px 0px 0px;
+            font-weight: bolder;
+        }
+
+        td, th {
+            padding: 5px;
+        }
+
+        th {
+            border-top: 1px solid black;
+            border-bottom: 1px solid black;
+        }
+
+        th:first-child, th:last-child {
+            border-left: 1px solid black;
+            border-right: 1px solid black;
+        }
+
+        td {
+            border-bottom: 1px solid black;
+        }
+
+        td:first-child, td:last-child {
+            border-left: 1px solid black;
+            border-right: 1px solid black;
+        }
+
+        thead, tfoot {
+            background-color: lavender;
+        }
+
+        thead > tr > th {
+            position: sticky;
+            top: 0px;
+            background-color: lavender;
+        }
+
+        tbody > tr:nth-child(2n){
+            background-color: rgb(246, 246, 255);
+        }
+
+        .num, #total {
+            text-align: right;            
+        }
+
+        #total {
+            font-weight: bolder;            
+        }
+        
+        #totalText {
+            border-top: 0px;
+            border-right: 0px;
+        }
+    </style>
+    <script src="https://code.jquery.com/jquery-3.7.1.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/numeral.js/2.0.6/numeral.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            let populations = document.getElementsByClassName("num")
+            let totalPopulation = 0
+            for (let i = 0; i < populations.length; i++){
+                totalPopulation += parseInt(populations[i].textContent.replaceAll(" ", ""))
+            }
+            document.getElementById("total").textContent = numeral(totalPopulation).format("0,0").replaceAll(",", " ")
+        });
+    </script>
+</head>
+<body>
+    <h1>Uso de tabelas grandes</h1>
+    <table>
+        <caption>População nas Unidades Federativas</caption>
+        <thead>
+            <tr>
+                <th scope="col">Posição</th>
+                <th scope="col">Unidade Federativa</th>
+                <th scope="col">População</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>1</td>
+                <td>São Paulo</td>
+                <td class="num">44 411 238</td>
+            </tr>
+            <tr>
+                <td>2</td>
+                <td>Minas Gerais</td>
+                <td class="num">20 538 718</td>
+            </tr>
+            <tr>
+                <td>3</td>
+                <td>Rio de Janeiro</td>
+                <td class="num">16 054 524</td>
+            </tr>
+            <tr>
+                <td>4</td>
+                <td>Bahia</td>
+                <td class="num">14 141 626</td>
+            </tr>
+            <tr>
+                <td>5</td>
+                <td>Paraná</td>
+                <td class="num">11 444 380</td>
+            </tr>
+            <tr>
+                <td>6</td>
+                <td>Rio Grande do Sul</td>
+                <td class="num">10 882 965</td>
+            </tr>
+            <tr>
+                <td>7</td>
+                <td>Pernambuco</td>
+                <td class="num">9 058 931</td>
+            </tr>
+            <tr>
+                <td>1</td>
+                <td>São Paulo</td>
+                <td class="num">44 411 238</td>
+            </tr>
+            <tr>
+                <td>2</td>
+                <td>Minas Gerais</td>
+                <td class="num">20 538 718</td>
+            </tr>
+            <tr>
+                <td>3</td>
+                <td>Rio de Janeiro</td>
+                <td class="num">16 054 524</td>
+            </tr>
+            <tr>
+                <td>4</td>
+                <td>Bahia</td>
+                <td class="num">14 141 626</td>
+            </tr>
+            <tr>
+                <td>5</td>
+                <td>Paraná</td>
+                <td class="num">11 444 380</td>
+            </tr>
+            <tr>
+                <td>6</td>
+                <td>Rio Grande do Sul</td>
+                <td class="num">10 882 965</td>
+            </tr>
+            <tr>
+                <td>7</td>
+                <td>Pernambuco</td>
+                <td class="num">9 058 931</td>
+            </tr>
+            <tr>
+                <td>1</td>
+                <td>São Paulo</td>
+                <td class="num">44 411 238</td>
+            </tr>
+            <tr>
+                <td>2</td>
+                <td>Minas Gerais</td>
+                <td class="num">20 538 718</td>
+            </tr>
+            <tr>
+                <td>3</td>
+                <td>Rio de Janeiro</td>
+                <td class="num">16 054 524</td>
+            </tr>
+            <tr>
+                <td>4</td>
+                <td>Bahia</td>
+                <td class="num">14 141 626</td>
+            </tr>
+            <tr>
+                <td>5</td>
+                <td>Paraná</td>
+                <td class="num">11 444 380</td>
+            </tr>
+            <tr>
+                <td>6</td>
+                <td>Rio Grande do Sul</td>
+                <td class="num">10 882 965</td>
+            </tr>
+            <tr>
+                <td>7</td>
+                <td>Pernambuco</td>
+                <td class="num">9 058 931</td>
+            </tr>
+            <tr>
+                <td>1</td>
+                <td>São Paulo</td>
+                <td class="num">44 411 238</td>
+            </tr>
+            <tr>
+                <td>2</td>
+                <td>Minas Gerais</td>
+                <td class="num">20 538 718</td>
+            </tr>
+            <tr>
+                <td>3</td>
+                <td>Rio de Janeiro</td>
+                <td class="num">16 054 524</td>
+            </tr>
+            <tr>
+                <td>4</td>
+                <td>Bahia</td>
+                <td class="num">14 141 626</td>
+            </tr>
+            <tr>
+                <td>5</td>
+                <td>Paraná</td>
+                <td class="num">11 444 380</td>
+            </tr>
+            <tr>
+                <td>6</td>
+                <td>Rio Grande do Sul</td>
+                <td class="num">10 882 965</td>
+            </tr>
+            <tr>
+                <td>7</td>
+                <td>Pernambuco</td>
+                <td class="num">9 058 931</td>
+            </tr>
+            <tr>
+                <td>1</td>
+                <td>São Paulo</td>
+                <td class="num">44 411 238</td>
+            </tr>
+            <tr>
+                <td>2</td>
+                <td>Minas Gerais</td>
+                <td class="num">20 538 718</td>
+            </tr>
+            <tr>
+                <td>3</td>
+                <td>Rio de Janeiro</td>
+                <td class="num">16 054 524</td>
+            </tr>
+            <tr>
+                <td>4</td>
+                <td>Bahia</td>
+                <td class="num">14 141 626</td>
+            </tr>
+            <tr>
+                <td>5</td>
+                <td>Paraná</td>
+                <td class="num">11 444 380</td>
+            </tr>
+            <tr>
+                <td>6</td>
+                <td>Rio Grande do Sul</td>
+                <td class="num">10 882 965</td>
+            </tr>
+            <tr>
+                <td>7</td>
+                <td>Pernambuco</td>
+                <td class="num">9 058 931</td>
+            </tr>
+            <tr>
+                <td>1</td>
+                <td>São Paulo</td>
+                <td class="num">44 411 238</td>
+            </tr>
+            <tr>
+                <td>2</td>
+                <td>Minas Gerais</td>
+                <td class="num">20 538 718</td>
+            </tr>
+            <tr>
+                <td>3</td>
+                <td>Rio de Janeiro</td>
+                <td class="num">16 054 524</td>
+            </tr>
+            <tr>
+                <td>4</td>
+                <td>Bahia</td>
+                <td class="num">14 141 626</td>
+            </tr>
+            <tr>
+                <td>5</td>
+                <td>Paraná</td>
+                <td class="num">11 444 380</td>
+            </tr>
+            <tr>
+                <td>6</td>
+                <td>Rio Grande do Sul</td>
+                <td class="num">10 882 965</td>
+            </tr>
+            <tr>
+                <td>7</td>
+                <td>Pernambuco</td>
+                <td class="num">9 058 931</td>
+            </tr>
+            <tr>
+                <td>1</td>
+                <td>São Paulo</td>
+                <td class="num">44 411 238</td>
+            </tr>
+            <tr>
+                <td>2</td>
+                <td>Minas Gerais</td>
+                <td class="num">20 538 718</td>
+            </tr>
+            <tr>
+                <td>3</td>
+                <td>Rio de Janeiro</td>
+                <td class="num">16 054 524</td>
+            </tr>
+            <tr>
+                <td>4</td>
+                <td>Bahia</td>
+                <td class="num">14 141 626</td>
+            </tr>
+            <tr>
+                <td>5</td>
+                <td>Paraná</td>
+                <td class="num">11 444 380</td>
+            </tr>
+            <tr>
+                <td>6</td>
+                <td>Rio Grande do Sul</td>
+                <td class="num">10 882 965</td>
+            </tr>
+            <tr>
+                <td>7</td>
+                <td>Pernambuco</td>
+                <td class="num">9 058 931</td>
+            </tr>
+        </tbody>
+        <tfoot>
+            <tr>
+                <th colspan="2" scope="row" id="totalText">Total de Habitantes</th>
+                <td id="total">0000</td>
+            </tr>
+        </tfoot>
+    </table>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eveniet cupiditate architecto temporibus expedita nam doloremque deleniti totam, illo iste numquam exercitationem in dolores. Animi quaerat, odio consectetur iusto commodi earum. Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente quos repudiandae dolorum modi deleniti, architecto, vero fuga quae autem quidem quam veritatis vitae id consequatur esse? Modi, mollitia? Quia, harum. lorem</p>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eveniet cupiditate architecto temporibus expedita nam doloremque deleniti totam, illo iste numquam exercitationem in dolores. Animi quaerat, odio consectetur iusto commodi earum. Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente quos repudiandae dolorum modi deleniti, architecto, vero fuga quae autem quidem quam veritatis vitae id consequatur esse? Modi, mollitia? Quia, harum. lorem</p>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eveniet cupiditate architecto temporibus expedita nam doloremque deleniti totam, illo iste numquam exercitationem in dolores. Animi quaerat, odio consectetur iusto commodi earum. Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente quos repudiandae dolorum modi deleniti, architecto, vero fuga quae autem quidem quam veritatis vitae id consequatur esse? Modi, mollitia? Quia, harum. lorem</p>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eveniet cupiditate architecto temporibus expedita nam doloremque deleniti totam, illo iste numquam exercitationem in dolores. Animi quaerat, odio consectetur iusto commodi earum. Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente quos repudiandae dolorum modi deleniti, architecto, vero fuga quae autem quidem quam veritatis vitae id consequatur esse? Modi, mollitia? Quia, harum. lorem</p>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eveniet cupiditate architecto temporibus expedita nam doloremque deleniti totam, illo iste numquam exercitationem in dolores. Animi quaerat, odio consectetur iusto commodi earum. Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente quos repudiandae dolorum modi deleniti, architecto, vero fuga quae autem quidem quam veritatis vitae id consequatur esse? Modi, mollitia? Quia, harum. lorem</p>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eveniet cupiditate architecto temporibus expedita nam doloremque deleniti totam, illo iste numquam exercitationem in dolores. Animi quaerat, odio consectetur iusto commodi earum. Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente quos repudiandae dolorum modi deleniti, architecto, vero fuga quae autem quidem quam veritatis vitae id consequatur esse? Modi, mollitia? Quia, harum. lorem</p>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eveniet cupiditate architecto temporibus expedita nam doloremque deleniti totam, illo iste numquam exercitationem in dolores. Animi quaerat, odio consectetur iusto commodi earum. Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente quos repudiandae dolorum modi deleniti, architecto, vero fuga quae autem quidem quam veritatis vitae id consequatur esse? Modi, mollitia? Quia, harum. lorem</p>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eveniet cupiditate architecto temporibus expedita nam doloremque deleniti totam, illo iste numquam exercitationem in dolores. Animi quaerat, odio consectetur iusto commodi earum. Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente quos repudiandae dolorum modi deleniti, architecto, vero fuga quae autem quidem quam veritatis vitae id consequatur esse? Modi, mollitia? Quia, harum. lorem</p>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eveniet cupiditate architecto temporibus expedita nam doloremque deleniti totam, illo iste numquam exercitationem in dolores. Animi quaerat, odio consectetur iusto commodi earum. Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente quos repudiandae dolorum modi deleniti, architecto, vero fuga quae autem quidem quam veritatis vitae id consequatur esse? Modi, mollitia? Quia, harum. lorem</p>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eveniet cupiditate architecto temporibus expedita nam doloremque deleniti totam, illo iste numquam exercitationem in dolores. Animi quaerat, odio consectetur iusto commodi earum. Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente quos repudiandae dolorum modi deleniti, architecto, vero fuga quae autem quidem quam veritatis vitae id consequatur esse? Modi, mollitia? Quia, harum. lorem</p>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eveniet cupiditate architecto temporibus expedita nam doloremque deleniti totam, illo iste numquam exercitationem in dolores. Animi quaerat, odio consectetur iusto commodi earum. Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente quos repudiandae dolorum modi deleniti, architecto, vero fuga quae autem quidem quam veritatis vitae id consequatur esse? Modi, mollitia? Quia, harum. lorem</p>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eveniet cupiditate architecto temporibus expedita nam doloremque deleniti totam, illo iste numquam exercitationem in dolores. Animi quaerat, odio consectetur iusto commodi earum. Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente quos repudiandae dolorum modi deleniti, architecto, vero fuga quae autem quidem quam veritatis vitae id consequatur esse? Modi, mollitia? Quia, harum. lorem</p>
+</body>
+</html>
