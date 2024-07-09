@@ -9,10 +9,15 @@
             width: 100vw;
             height: 500px;
         }
+
+        dialog::backdrop {
+            backdrop-filter: blur(10px);
+        }
     </style>
 </head>
 <body>
     <h1>Faça uma escolha</h1>
+    <button id="open">Abre</button>
     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed itaque veritatis necessitatibus quod sequi dolore a hic assumenda, laborum ut obcaecati accusantium impedit praesentium odit sint molestias et debitis explicabo!</p>
 
     <ul>
@@ -26,5 +31,24 @@
     <iframe name="Frame" frameborder="0"></iframe>
 
     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus veniam in nam, suscipit necessitatibus voluptates alias quis corrupti exercitationem similique, ullam officia, natus nisi incidunt repellendus nemo voluptate quaerat voluptas. Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi nam aut animi commodi quibusdam officia error, sit doloribus assumenda vitae velit? Illo quaerat voluptatibus unde et quas repudiandae, rerum ad!</p>
+
+    <dialog>
+        <h1>Titulo do Dialogo</h1>
+        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Distinctio provident dolores maiores, totam ipsam dolor quis nulla aliquam vero enim voluptatibus officiis sed magnam commodi, blanditiis neque, porro excepturi alias. Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusantium, minima illo. Et aliquam beatae cupiditate amet voluptates harum ad architecto sit dignissimos corporis error consequuntur ab molestias eum, laudantium porro!</p>
+        <button id="close">Clique em Mim</button>
+    </dialog>
+
+    <script>
+        const button = document.getElementById("open")
+        const modal = document.querySelector("dialog")
+        button.onclick = function () {
+            modal.showModal()
+        }
+
+        const closebutton = document.getElementById("close")
+        closebutton.onclick = function () {
+            modal.close()
+        }
+    </script>
 </body>
 </html>
